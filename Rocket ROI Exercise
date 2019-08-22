@@ -1,15 +1,83 @@
-//Datos de sesion
+<!--Datos de Sesion-->
 
 <script>
   dataLayer = [{
     'language': 'signup',
-    'cookie-id': '',
+    var tracker = ga.getAll()[0];
+    var clientId = tracker.get('clientId')
+    'cookie-id': clientId,
     'domain': 'https://www.vamos.es/',
     'pageType': 'homepage'
   }];
 </script>
 
 
-//Interacciones
+<!--Cookies-->
 
-<a href="#" name="button1" onclick="dataLayer.push({'event': 'button1-click'});" >Button 1</a>
+<div class="cdp-cookies-alerta  cdp-solapa-ocultar cdp-cookies-textos-izq cdp-cookies-tema-gris" onclick="dataLayer.push({'event': 'show-cookies'});">
+    <div class="cdp-cookies-texto">
+        <div class="contenedor-cookies">
+            <p class="texto-desktop-cookies">Utilizamos cookies propias y de terceros para mejorar nuestros servicios y mostrarle<br>publicidad relacionada con sus preferencias mediante el análisis de sus hábitos de navegación.<br>
+Si continúa navegando, consideramos que acepta su uso.</p>
+<a class="ver-mas-desktop" href="/uso-de-cookies" onclick="dataLayer.push({'event': 'cookies-more-click'});">SABER MÁS</a>
+
+<p class="texto-movil-cookies">Al utilizar este sitio aceptas<br>nuestra <a class="politica" href="#">política de cookies</a>.</p>
+
+            <p class="boton-cookies-desktop"><a href="javascript:;" class="cdp-cookies-boton-cerrar" onclick="dataLayer.push({'event': 'cookies-accept-click'});">ACEPTAR</a> </p>
+            <p class="boton-cookies-movil"><a href="javascript:;" class="cdp-cookies-boton-cerrar" onclick="dataLayer.push({'event': 'cookies-accept-click'});">ACEPTAR</a> </p>
+        </div>
+    </div>
+    <a class="cdp-cookies-solapa">Aviso de cookies</a>
+</div>
+
+
+<!--Scroll-->
+
+window.onscroll = function() {scrollEvent25();scrollEvent50();scrollEvent75();};
+
+function scrollEvent25() {
+  if (document.body.scrollTop > (0.25*document.body.scrollHeight)) {
+    dataLayer.push({'event': 'scroll-25'});
+  }
+}
+
+function scrollEvent50() {
+  if (document.body.scrollTop > (0.5*document.body.scrollHeight)) {
+    dataLayer.push({'event': 'scroll-50'});
+  }
+}
+
+
+function scrollEvent75() {
+  if (document.body.scrollTop > (0.75*document.body.scrollHeight)) {
+    dataLayer.push({'event': 'scroll-75'});
+  }
+}
+
+function scrollEvent100() {
+  if (document.body.scrollTop = document.body.scrollHeight) {
+    dataLayer.push({'event': 'scroll-75'});
+  }
+}
+
+
+<!--Errores 404-->
+
+
+
+
+<!--Chat-->
+
+
+
+
+<!--Click en logo-->
+
+<a href="https://www.vamos.es/" class="custom-logo-link" rel="home" itemprop="url" onclick="dataLayer.push({'event': 'logo-click'});"><img width="240" height="46" src="https://www.vamos.es/wp-content/uploads/2019/06/cropped-logo_vamos.png" class="custom-logo" alt="Vamos | Renting de coches" itemprop="logo" /></a>
+
+
+
+<!--Menu-->
+
+
+
