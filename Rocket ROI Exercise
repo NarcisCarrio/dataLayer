@@ -63,7 +63,12 @@ function scrollEvent100() {
 
 <!--Errores 404-->
 
-
+<script type="text/javascript">
+window.addEventListener('error', function(e) {
+    console.log(e);
+    dataLayer.push({'event': 'error-404'});
+}, true);
+</script>
 
 
 <!--Chat-->
@@ -76,8 +81,77 @@ function scrollEvent100() {
 <a href="https://www.vamos.es/" class="custom-logo-link" rel="home" itemprop="url" onclick="dataLayer.push({'event': 'logo-click'});"><img width="240" height="46" src="https://www.vamos.es/wp-content/uploads/2019/06/cropped-logo_vamos.png" class="custom-logo" alt="Vamos | Renting de coches" itemprop="logo" /></a>
 
 
-
 <!--Menu-->
 
+<div id="site-header-menu" class="site-header-menu">
 
+	<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu" 
+onclick="if(typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1) {dataLayer.push({'event': 'menu-mobile-click'});}">
+	<div class="menu-menu-1-container">
+		<ul id="menu-menu-1" class="primary-menu">
+		<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16">
+		<a href="https://www.vamos.es/como-funciona-vamos" onclick="dataLayer.push({'event': 'menu-click'});">¿Cómo funciona vamos?</a>
+		</li>
+
+		<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20">
+		<a href="https://www.vamos.es/elige-coche-para-renting" onclick="dataLayer.push({'event': 'menu-click'});">Elige tu renting</a>
+		</li>
+		
+<li id="menu-item-1777" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1777">
+		<a href="https://www.vamos.es/ultimasnoticias" onclick="dataLayer.push({'event': 'menu-click'});">Últimas noticias</a>
+		</li>
+		
+<li id="menu-item-123" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-123">
+		<a href="tel:+34910781751" onclick="dataLayer.push({'event': 'call-click'});">910 781 751</a>
+		</li>
+
+		</ul>
+	</div>                                   
+	</nav><!-- .main-navigation -->
+</div><!-- .site-header-menu -->
+
+
+<!--Footer Menu-->
+
+<footer id="colophon" class="site-footer ancho-completo" role="contentinfo">
+	<div class="contenedor-footer1">
+		<div class="logo-footer">
+			<img src="/wp-content/uploads/2019/03/logo-blanco.svg"/>
+		</div>
+		<div>
+			<div class="telefono">
+				<a href="tel:+34910781751" onclick="dataLayer.push({'event': 'call-click'});">910 781 751</a>
+			</div>
+		</div>
+	</div>
+	<div class="contenedor-footer2">
+		<div class="sobre-nosotros"><span>Sobre nosotros</span>
+			<div class="texto-footer">
+				<a href="/trabajar-en-vamos" onclick="dataLayer.push({'event': 'menu-click'});">Empleo</a>
+			</div>
+			<div class="texto-footer">
+				<a style="display:none;" href="/prensa/">Prensa</a>
+			</div>
+			<div class="texto-footer">
+				<a href="/ultimasnoticias/" onclick="dataLayer.push({'event': 'menu-click'});">Últimas noticias</a>
+			</div>
+		</div>
+		<div class="unete"><span>Colaboraciones</span>
+			<div class="texto-footer">
+				<a href="/soy-proveedor" onclick="dataLayer.push({'event': 'menu-click'});">Soy proveedor</a>
+			</div>
+			<div class="texto-footer">
+				<a style="display:none;" href="/ofertas-empresas">Renting para empresas</a>
+			</div>
+		</div>
+		<div class="sobre-nosotros"><span>Ayuda</span>
+			<div class="texto-footer">
+				<a href="/preguntas-frecuentes" onclick="dataLayer.push({'event': 'menu-click'});">FAQs</a>
+			</div>
+			<div class="texto-footer">
+				<a href="/como-funciona-vamos" onclick="dataLayer.push({'event': 'menu-click'});">¿Cómo funciona Vamos?</a>
+			</div>
+		</div>
+	</div>
+</footer><!-- .site-footer -->
 
