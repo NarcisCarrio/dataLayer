@@ -1,0 +1,15 @@
+//Datos de sesion
+
+<script>
+  dataLayer = [{
+    'language': 'signup',
+    'cookie-id': '',
+    'domain': 'https://www.vamos.es/',
+    'pageType': 'homepage'
+  }];
+</script>
+
+
+//Interacciones
+
+<a href="#" name="button1" onclick="dataLayer.push({'event': 'button1-click'});" >Button 1</a>
